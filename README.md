@@ -1,4 +1,4 @@
 pom
 ===
 
-Base POM for fuin.org projects
+Base POM for http://www.fuin.org/ projects
