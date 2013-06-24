@@ -53,6 +53,7 @@
 
 	<properties>
 		<checkstyle.config.location>${project.baseUri}checkstyle.xml</checkstyle.config.location>
+		<checkstyle.header.file>${project.baseUri}required-header.txt</checkstyle.header.file>
 	</properties>
 
     <build>
