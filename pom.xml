@@ -52,7 +52,7 @@
     </issueManagement>
 
 	<properties>
-		<checkstyle.config.location>file:/${basedir}/checkstyle.xml</checkstyle.config.location>
+		<checkstyle.config.location>${project.baseUri}checkstyle.xml</checkstyle.config.location>
 	</properties>
 
     <build>
