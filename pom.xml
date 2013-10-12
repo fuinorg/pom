@@ -52,8 +52,7 @@
     </issueManagement>
 
 	<properties>
-		<checkstyle.config.location>${project.baseUri}checkstyle.xml</checkstyle.config.location>
-		<checkstyle.header.file>${project.baseUri}required-header.txt</checkstyle.header.file>
+		<checkstyle.config.location>http://www.fuin.org/files/checkstyle-2013-10-12.xml</checkstyle.config.location>
 	</properties>
 
     <build>
@@ -95,7 +94,6 @@
                 <version>2.10</version>
                 <configuration>
                     <configLocation>http://www.fuin.org/files/checkstyle-2013-10-12.xml</configLocation>
-                    <headerLocation>http://www.fuin.org/files/required-header-2013-10-12.txt</headerLocation>
                 </configuration>
             </plugin>
 
