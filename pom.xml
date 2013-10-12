@@ -12,7 +12,7 @@
     <groupId>org.fuin</groupId>
     <artifactId>pom</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.7</version>
+    <version>1.1.0-SNAPSHOT</version>
 	<name>Base POM for fuin.org projects</name>
 	<url>https://github.com/fuinorg/pom/</url>
 	<description>Provides standard settings for http://www.fuin.org/ projects.</description>
@@ -94,8 +94,8 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.10</version>
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                    <headerLocation>required-header.txt</headerLocation>
+                    <configLocation>http://www.fuin.org/files/checkstyle-2013-10-12.xml</configLocation>
+                    <headerLocation>http://www.fuin.org/files/required-header-2013-10-12.txt</headerLocation>
                 </configuration>
             </plugin>
 
