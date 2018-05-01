@@ -8,11 +8,7 @@ node {
    }
    
    stage('Build') {
-      if (isUnix()) {
-         sh "./mvnw -P sonatype-oss-release -U -B --settings /private/fuin-org/settings.xml -Dmaven.test.failure.ignore clean deploy"
-      } else {
-         bat(/mvnw -P sonatype-oss-release -U -B --settings /private/fuin-org/settings.xml -Dmaven.test.failure.ignore clean deploy/)
-      }
+      sh "./mvnw -P sonatype-oss-release -U -B --settings /private/fuin-org/settings.xml -Dmaven.test.failure.ignore clean deploy"
    }
    
 }
