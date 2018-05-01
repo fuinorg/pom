@@ -6,9 +6,9 @@ node {
    
    stage('Build') {
       if (isUnix()) {
-         sh "./mvnw -Dmaven.test.failure.ignore clean package"
+         sh "./mvnw -B -Dmaven.test.failure.ignore clean package"
       } else {
-         bat(/mvnw -Dmaven.test.failure.ignore clean package/)
+         bat(/mvnw -B -Dmaven.test.failure.ignore clean package/)
       }
    }
    
