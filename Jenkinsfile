@@ -1,12 +1,18 @@
-node {
-   
-   stage('Preparation') {
-      git 'https://github.com/fuinorg/pom'
-      sh "sudo /opt/jenkins/sbin/mount-webdav https://repository-fuin-org.forge.cloudbees.com/private fuin-org alert"
-   }
-   
-   stage('Build') {
-      sh "./mvnw -P sonatype-oss-release -U -B --settings /private/fuin-org/settings.xml -Dmaven.test.failure.ignore clean deploy"
-   }
-   
+pipeline {
+    agent any 
+    tools { 
+        jdk 'Oracle JDK 8 (latest)'
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh "./mvnw -version"
+            }
+        }
+        stage('Build') { 
+            steps {
+                sh "./mvnw clean deploy -U -B -P sonatype-oss-release -s /private/jenkins/settings.xml -Dmaven.test.failure.ignore" 
+            }
+        }
+    }
 }
