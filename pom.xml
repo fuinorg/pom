@@ -54,7 +54,8 @@
 
     <properties>
         <checkstyle.config.location>http://www.fuin.org/files/checkstyle-2018-05-01.xml</checkstyle.config.location>
-        <maven.compiler.release>11</maven.compiler.release>
+        <java.version>11</java.version>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
     </properties>
 
     <build>
@@ -138,6 +139,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jdeps-plugin</artifactId>
                 <version>3.1.2</version>
+                <configuration>
+                    <multiRelease>${java.version}</multiRelease>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -164,7 +168,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>11</release>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
 
