@@ -86,6 +86,7 @@
                                         <ignore />
                                     </action>
                                 </pluginExecution>
+<!-- Disabled until https://issues.apache.org/jira/browse/MJDEPS-15 is solved
                                 <pluginExecution>
                                     <pluginExecutionFilter>
                                         <groupId>org.apache.maven.plugins</groupId>
@@ -100,6 +101,7 @@
                                         <ignore />
                                     </action>
                                 </pluginExecution>
+-->                                
                             </pluginExecutions>
                         </lifecycleMappingMetadata>
                     </configuration>
@@ -135,6 +137,7 @@
                 </executions>
             </plugin>
 
+<!-- Disabled until https://issues.apache.org/jira/browse/MJDEPS-15 is solved
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jdeps-plugin</artifactId>
@@ -151,7 +154,7 @@
                     </execution>
                 </executions>
             </plugin>
-
+-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
