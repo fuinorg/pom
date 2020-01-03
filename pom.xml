@@ -109,11 +109,13 @@
                         </goals>
                         <configuration>
                             <rules>
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                    <message>Java 11 or later is required!</message>
+                                </requireJavaVersion>
                                 <requireMavenVersion>
                                     <version>3.6.0</version>
-                                    <message>Please use at least Maven
-                                        3.6.0 as older versions may
-                                        cause problems with Java 11+</message>
+                                    <message>Please use at least Maven 3.6.0 as older versions may cause problems with Java 11+</message>
                                 </requireMavenVersion>
                             </rules>
                         </configuration>
