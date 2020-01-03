@@ -110,7 +110,9 @@
                             <rules>
                                 <requireMavenVersion>
                                     <version>3.6.0</version>
-                                    <message>Please use at least Maven 3.6.0 as older versions may cause problems with Java 11+</message>
+                                    <message>Please use at least Maven
+                                        3.6.0 as older versions may
+                                        cause problems with Java 11+</message>
                                 </requireMavenVersion>
                             </rules>
                         </configuration>
@@ -138,6 +140,12 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
