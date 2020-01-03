@@ -86,22 +86,6 @@
                                         <ignore />
                                     </action>
                                 </pluginExecution>
-
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-jdeps-plugin</artifactId>
-                                        <versionRange>[3.1.2,)</versionRange>
-                                        <goals>
-                                            <goal>jdkinternals</goal>
-                                            <goal>test-jdkinternals</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore />
-                                    </action>
-                                </pluginExecution>
-                               
                             </pluginExecutions>
                         </lifecycleMappingMetadata>
                     </configuration>
@@ -133,23 +117,6 @@
                                 </requireMavenVersion>
                             </rules>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jdeps-plugin</artifactId>
-                <version>3.1.2</version>
-                <configuration>
-                    <multiRelease>base</multiRelease>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>jdkinternals</goal>
-                            <goal>test-jdkinternals</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
@@ -231,10 +198,6 @@
                                 </goals>
                                 <configuration>
                                     <properties>
-                                        <property>
-                                            <name>jdeps.multiRelease</name>
-                                            <value>base</value>
-                                        </property>
                                         <property>
                                             <name>gpg.passphrase</name>
                                             <value>${gpg.passphrase}</value>
