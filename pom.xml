@@ -226,6 +226,10 @@
                                 <configuration>
                                     <properties>
                                         <property>
+                                            <name>jdeps.multiRelease</name>
+                                            <value>base</value>
+                                        </property>
+                                        <property>
                                             <name>gpg.passphrase</name>
                                             <value>${gpg.passphrase}</value>
                                         </property>
