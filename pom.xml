@@ -64,6 +64,23 @@
 
             <plugins>
 
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jdeps-plugin</artifactId>
+                    <version>3.1.2</version>
+                    <configuration>
+                        <multiRelease>base</multiRelease>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>jdkinternals</goal>
+                                <goal>test-jdkinternals</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
                 <!--This plugin's configuration is used to store Eclipse 
                     m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>
@@ -97,7 +114,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore/>
+                                        <ignore />
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
