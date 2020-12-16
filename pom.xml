@@ -1,365 +1,365 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.fuin</groupId>
-    <artifactId>pom</artifactId>
-    <packaging>pom</packaging>
-    <version>1.7.0-SNAPSHOT</version>
-    <name>Base POM for fuin.org projects</name>
-    <url>https://github.com/fuinorg/pom/</url>
-    <description>Provides standard settings for http://www.fuin.org/ projects.</description>
+	<groupId>org.fuin</groupId>
+	<artifactId>pom</artifactId>
+	<packaging>pom</packaging>
+	<version>1.7.0-SNAPSHOT</version>
+	<name>Base POM for fuin.org projects</name>
+	<url>https://github.com/fuinorg/pom/</url>
+	<description>Provides standard settings for http://www.fuin.org/ projects.</description>
 
-    <licenses>
-        <license>
-            <name>LGPL</name>
-            <url>http://www.fsf.org/licensing/licenses/lgpl.html</url>
-            <distribution>repo</distribution>
-            <comments>GNU Lesser General Public License</comments>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>LGPL</name>
+			<url>http://www.fsf.org/licensing/licenses/lgpl.html</url>
+			<distribution>repo</distribution>
+			<comments>GNU Lesser General Public License</comments>
+		</license>
+	</licenses>
 
-    <organization>
-        <name>fuin.org (Germany)</name>
-        <url>http://www.fuin.org/</url>
-    </organization>
+	<organization>
+		<name>fuin.org (Germany)</name>
+		<url>http://www.fuin.org/</url>
+	</organization>
 
-    <developers>
-        <developer>
-            <id>michael-schnell</id>
-            <email>michael@fuin.org</email>
-            <name>Michael Schnell</name>
-            <url>https://github.com/michael-schnell</url>
-        </developer>
-    </developers>
+	<developers>
+		<developer>
+			<id>michael-schnell</id>
+			<email>michael@fuin.org</email>
+			<name>Michael Schnell</name>
+			<url>https://github.com/michael-schnell</url>
+		</developer>
+	</developers>
 
-    <scm>
-        <url>https://github.com/fuinorg/pom/</url>
-        <connection>scm:git:git://github.com/fuinorg/pom.git</connection>
-        <developerConnection>scm:git:git@github.com:fuinorg/pom.git</developerConnection>
-    </scm>
+	<scm>
+		<url>https://github.com/fuinorg/pom/</url>
+		<connection>scm:git:git://github.com/fuinorg/pom.git</connection>
+		<developerConnection>scm:git:git@github.com:fuinorg/pom.git</developerConnection>
+	</scm>
 
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/fuinorg/pom/issues</url>
-    </issueManagement>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/fuinorg/pom/issues</url>
+	</issueManagement>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
-        </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+		</snapshotRepository>
+		<repository>
+			<id>sonatype-nexus-staging</id>
+			<name>Nexus Release Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 
-    <repositories>
+	<repositories>
 
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 
-    </repositories>
+	</repositories>
 
-    <properties>
-        <checkstyle.config.location>http://www.fuin.org/files/checkstyle-2018-05-01.xml</checkstyle.config.location>
-        <java.version>11</java.version>
-        <maven.compiler.release>${java.version}</maven.compiler.release>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
-        <arguments />
-    </properties>
+	<properties>
+		<checkstyle.config.location>http://www.fuin.org/files/checkstyle-2018-05-01.xml</checkstyle.config.location>
+		<java.version>11</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+		<arguments />
+	</properties>
 
-    <build>
+	<build>
 
-        <pluginManagement>
+		<pluginManagement>
 
-            <plugins>
+			<plugins>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jdeps-plugin</artifactId>
-                    <version>3.1.2</version>
-                    <configuration>
-                        <multiRelease>base</multiRelease>
-                        <failOnWarning>true</failOnWarning>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>jdkinternals</goal>
-                                <goal>test-jdkinternals</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jdeps-plugin</artifactId>
+					<version>3.1.2</version>
+					<configuration>
+						<multiRelease>base</multiRelease>
+						<failOnWarning>true</failOnWarning>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>jdkinternals</goal>
+								<goal>test-jdkinternals</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <configuration>
-                        <includes>
-                            <include>**/*</include>
-                        </includes>
-                    </configuration>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.2.0</version>
+					<configuration>
+						<includes>
+							<include>**/*</include>
+						</includes>
+					</configuration>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <configuration>
-                        <release>${java.version}</release>
-                    </configuration>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<release>${java.version}</release>
+					</configuration>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.1.1</version>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>3.2.0</version>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>3.1.0</version>
-                    <configuration>
-                        <configLocation>${checkstyle.config.location}</configLocation>
-                        <encoding>UTF-8</encoding>
-                    </configuration>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>3.1.1</version>
+					<configuration>
+						<configLocation>${checkstyle.config.location}</configLocation>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.5</version>
-                    <executions>
-                        <execution>
-                            <id>prepare-agent</id>
-                            <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.6</version>
+					<executions>
+						<execution>
+							<id>prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>maven-bundle-plugin</artifactId>
-                    <version>4.2.1</version>
-                    <extensions>true</extensions>
-                    <executions>
-                        <execution>
-                            <id>create-manifest</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>bundle</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>5.1.1</version>
+					<extensions>true</extensions>
+					<executions>
+						<execution>
+							<id>create-manifest</id>
+							<phase>package</phase>
+							<goals>
+								<goal>bundle</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>3.2.0</version>
-                    <executions>
-                        <execution>
-                            <id>attach-sources</id>
-                            <goals>
-                                <goal>jar-no-fork</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>3.2.1</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar-no-fork</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>3.0.0-M1</version>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>3.0.0-M1</version>
+				</plugin>
 
-                <!--This plugin's configuration is used to store Eclipse 
-                    m2e settings only. It has no influence on the Maven build itself. -->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>properties-maven-plugin</artifactId>
-                                        <versionRange>1.0.0</versionRange>
-                                        <goals>
-                                            <goal>set-system-properties</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore />
-                                    </action>
-                                </pluginExecution>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-jdeps-plugin</artifactId>
-                                        <versionRange>[3.1.2,)</versionRange>
-                                        <goals>
-                                            <goal>jdkinternals</goal>
-                                            <goal>test-jdkinternals</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore />
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>properties-maven-plugin</artifactId>
+										<versionRange>1.0.0</versionRange>
+										<goals>
+											<goal>set-system-properties</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-jdeps-plugin</artifactId>
+										<versionRange>[3.1.2,)</versionRange>
+										<goals>
+											<goal>jdkinternals</goal>
+											<goal>test-jdkinternals</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
 
-            </plugins>
+			</plugins>
 
-        </pluginManagement>
+		</pluginManagement>
 
-        <plugins>
+		<plugins>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M3</version>
-                <executions>
-                    <execution>
-                        <id>enforce-java-and-maven-version</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireJavaVersion>
-                                    <version>${java.version}</version>
-                                    <message>Java 11 or later is
-                                        required!</message>
-                                </requireJavaVersion>
-                                <requireMavenVersion>
-                                    <version>3.6.0</version>
-                                    <message>Please use at least Maven
-                                        3.6.0 as older versions may
-                                        cause problems with Java 11+</message>
-                                </requireMavenVersion>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<executions>
+					<execution>
+						<id>enforce-java-and-maven-version</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>${java.version}</version>
+									<message>Java 11 or later is
+										required!</message>
+								</requireJavaVersion>
+								<requireMavenVersion>
+									<version>3.6.0</version>
+									<message>Please use at least Maven
+										3.6.0 as older versions may
+										cause problems with Java 11+</message>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
-        </plugins>
+		</plugins>
 
-    </build>
+	</build>
 
-    <reporting>
+	<reporting>
 
-        <plugins>
+		<plugins>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
 
-        </plugins>
+		</plugins>
 
-    </reporting>
+	</reporting>
 
-    <profiles>
+	<profiles>
 
-        <profile>
-            <id>sonatype-oss-release</id>
+		<profile>
+			<id>sonatype-oss-release</id>
 
-            <build>
+			<build>
 
-                <plugins>
+				<plugins>
 
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>properties-maven-plugin</artifactId>
-                        <version>1.0.0</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>set-system-properties</goal>
-                                </goals>
-                                <configuration>
-                                    <properties>
-                                        <property>
-                                            <name>gpg.passphrase</name>
-                                            <value>${gpg.passphrase}</value>
-                                        </property>
-                                    </properties>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>properties-maven-plugin</artifactId>
+						<version>1.0.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>set-system-properties</goal>
+								</goals>
+								<configuration>
+									<properties>
+										<property>
+											<name>gpg.passphrase</name>
+											<value>${gpg.passphrase}</value>
+										</property>
+									</properties>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                                <configuration>
-                                    <gpgArguments>
-                                        <arg>--pinentry-mode</arg>
-                                        <arg>loopback</arg>
-                                    </gpgArguments>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+								<configuration>
+									<gpgArguments>
+										<arg>--pinentry-mode</arg>
+										<arg>loopback</arg>
+									</gpgArguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-release-plugin</artifactId>
-                        <version>3.0.0-M1</version>
-                        <configuration>
-                            <mavenExecutorId>forked-path</mavenExecutorId>
-                            <useReleaseProfile>false</useReleaseProfile>
-                            <arguments>${arguments}
-                                -Psonatype-oss-release</arguments>
-                        </configuration>
-                    </plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>3.0.0-M1</version>
+						<configuration>
+							<mavenExecutorId>forked-path</mavenExecutorId>
+							<useReleaseProfile>false</useReleaseProfile>
+							<arguments>${arguments}
+								-Psonatype-oss-release</arguments>
+						</configuration>
+					</plugin>
 
-                </plugins>
+				</plugins>
 
-            </build>
+			</build>
 
-        </profile>
+		</profile>
 
-    </profiles>
+	</profiles>
 
 </project>
