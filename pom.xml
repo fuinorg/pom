@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -74,11 +76,13 @@
 	</repositories>
 
 	<properties>
-		<checkstyle.config.location>http://www.fuin.org/files/checkstyle-2018-05-01.xml</checkstyle.config.location>
+		<checkstyle.config.location>
+			http://www.fuin.org/files/checkstyle-2018-05-01.xml</checkstyle.config.location>
 		<java.version>11</java.version>
 		<maven.compiler.release>${java.version}</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+		<sonatypeOssDistMgmtSnapshotsUrl>
+			https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
 		<arguments />
 	</properties>
 
@@ -196,47 +200,6 @@
 					<version>3.0.1</version>
 				</plugin>
 
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.codehaus.mojo</groupId>
-										<artifactId>properties-maven-plugin</artifactId>
-										<versionRange>1.1.0</versionRange>
-										<goals>
-											<goal>set-system-properties</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.apache.maven.plugins</groupId>
-										<artifactId>maven-jdeps-plugin</artifactId>
-										<versionRange>[3.1.2,)</versionRange>
-										<goals>
-											<goal>jdkinternals</goal>
-											<goal>test-jdkinternals</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-
 			</plugins>
 
 		</pluginManagement>
@@ -261,7 +224,9 @@
 								</requireJavaVersion>
 								<requireMavenVersion>
 									<version>3.6.0</version>
-									<message>Please use at least Maven 3.6.0 as older versions may cause problems with Java 11+</message>
+									<message>Please use at least Maven 3.6.0 as
+										older versions may cause problems with
+										Java 11+</message>
 								</requireMavenVersion>
 							</rules>
 						</configuration>
@@ -357,6 +322,66 @@
 
 			</build>
 
+		</profile>
+
+
+		<profile>
+			<id>only-eclipse</id>
+			<activation>
+				<property>
+					<name>m2e.version</name>
+				</property>
+			</activation>
+			<build>
+				<pluginManagement>
+					
+					<plugins>
+						<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+						<plugin>
+							<groupId>org.eclipse.m2e</groupId>
+							<artifactId>lifecycle-mapping</artifactId>
+							<version>1.0.0</version>
+							<configuration>
+								<lifecycleMappingMetadata>
+									<pluginExecutions>
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.codehaus.mojo</groupId>
+												<artifactId>
+													properties-maven-plugin</artifactId>
+												<versionRange>1.1.0</versionRange>
+												<goals>
+													<goal>set-system-properties</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>
+													org.apache.maven.plugins</groupId>
+												<artifactId>maven-jdeps-plugin</artifactId>
+												<versionRange>[3.1.2,)</versionRange>
+												<goals>
+													<goal>jdkinternals</goal>
+													<goal>test-jdkinternals</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+									</pluginExecutions>
+								</lifecycleMappingMetadata>
+							</configuration>
+						</plugin>
+						
+					</plugins>
+				</pluginManagement>
+			</build>
 		</profile>
 
 	</profiles>
