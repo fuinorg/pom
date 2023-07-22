@@ -109,7 +109,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.2.0</version>
+					<version>3.3.0</version>
 					<configuration>
 						<includes>
 							<include>**/*</include>
@@ -120,7 +120,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.1</version>
+					<version>3.11.0</version>
 					<configuration>
 						<release>${java.version}</release>
 					</configuration>
@@ -129,7 +129,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.3.1</version>
+					<version>3.5.0</version>
 					<executions>
 						<execution>
 							<id>attach-javadocs</id>
@@ -143,13 +143,13 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M5</version>
+					<version>3.1.2</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.8.7</version>
+					<version>0.8.10</version>
 					<executions>
 						<execution>
 							<id>prepare-agent</id>
@@ -163,7 +163,7 @@
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
-					<version>5.1.2</version>
+					<version>5.1.9</version>
 					<extensions>true</extensions>
 					<executions>
 						<execution>
@@ -179,7 +179,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.2.1</version>
+					<version>3.3.0</version>
 					<executions>
 						<execution>
 							<id>attach-sources</id>
@@ -193,7 +193,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>3.0.0-M4</version>
+					<version>3.0.1</version>
 				</plugin>
 
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
@@ -209,7 +209,7 @@
 									<pluginExecutionFilter>
 										<groupId>org.codehaus.mojo</groupId>
 										<artifactId>properties-maven-plugin</artifactId>
-										<versionRange>1.0.0</versionRange>
+										<versionRange>1.1.0</versionRange>
 										<goals>
 											<goal>set-system-properties</goal>
 										</goals>
@@ -246,7 +246,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<id>enforce-java-and-maven-version</id>
@@ -280,7 +280,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>3.1.2</version>
+				<version>3.4.5</version>
 				<configuration>
 					<skip>true</skip>
 				</configuration>
@@ -302,7 +302,7 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>properties-maven-plugin</artifactId>
-						<version>1.0.0</version>
+						<version>1.1.0</version>
 						<executions>
 							<execution>
 								<goals>
@@ -323,7 +323,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.0.1</version>
+						<version>3.1.0</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
