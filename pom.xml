@@ -217,7 +217,7 @@
                             <rules>
                                 <requireJavaVersion>
                                     <version>${java.version}</version>
-                                    <message>Java 11 or later is required!</message>
+                                    <message>Java ${java.version} or later is required!</message>
                                 </requireJavaVersion>
                                 <requireMavenVersion>
                                     <version>3.6.0</version>
